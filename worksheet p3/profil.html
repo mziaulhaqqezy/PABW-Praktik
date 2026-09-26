@@ -1,38 +1,48 @@
 <!DOCTYPE html>
+<!--
+  KERANGKA HASIL SELESAI — Halaman Profil Saya
+  PABW 2026/2027 · Pertemuan 3
+  Topik: Jadwal dan Target Olahraga Saya
+-->
 <html lang="id">
 <head>
+  <!-- TODO B.1: Meta Tag & Viewport -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jadwal dan Target Olahraga Saya</title>
+  
+  <!-- TODO B.2: Judul Halaman -->
+  <title>Jadwal dan Target Olahraga Saya - Profil Saya</title>
 </head>
 <body>
 
-  <!-- Header & Navigasi -->
+  <!-- TODO C.1: Header dan Navigasi Utama -->
   <header>
     <h1>Jadwal & Target Olahraga Saya</h1>
     <nav aria-label="Navigasi utama">
       <ul>
         <li><a href="#jadwal-olahraga">Jadwal Olahraga</a></li>
-        <li><a href="#catat-latihan">Catat Latihan</a></li>
-        <li><a href="#kontak">Profil &amp; Kontak</a></li>
+        <li><a href="#catat-latihan">Catat Latihan Baru</a></li>
+        <li><a href="#tentang-saya">Tentang Saya</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Konten Utama -->
+  <!-- TODO C.2: Landmark <main> pembungkus konten utama -->
   <main>
-    <!-- Section 1: Tabel Data & Gambar -->
+    
+    <!-- Section 1: Tabel Data Olahraga & Gambar -->
     <section id="jadwal-olahraga">
-      <h2>Jadwal dan Catatan Latihan</h2>
-      
+      <h2>Jadwal dan Target Olahraga Mingguan</h2>
+
+      <!-- TODO D.1: Tabel data olahraga dengan elemen semantik lengkap -->
       <table>
-        <caption>Tabel Target dan Catatan Aktivitas Olahraga Mingguan</caption>
+        <caption>Target dan Catatan Aktivitas Olahraga Mingguan</caption>
         <thead>
           <tr>
             <th scope="col">Hari</th>
             <th scope="col">Jenis Olahraga</th>
-            <th scope="col">Durasi (Menit)</th>
-            <th scope="col">Kalori Terbakar (kcal)</th>
+            <th scope="col">Durasi (menit)</th>
+            <th scope="col">Target Kalori (kcal)</th>
           </tr>
         </thead>
         <tbody>
@@ -57,13 +67,16 @@
         </tbody>
       </table>
 
+      <br>
+
+      <!-- TODO D.2: Gambar dengan figure, figcaption, alt bermakna, dan dimensi -->
       <figure>
-        <img src="olahraga.webp" 
-             alt="Sepatu lari dan botol minum terletak di lintasan atletik stadion" 
+        <img src="olahraga.jpg" 
+             alt="seorang pelari yang sedang menjalankan program latihan harian" 
              width="640" 
              height="360" 
              loading="lazy">
-        <figcaption>Persiapan peralatan sebelum memulai rutinitas latihan lari pagi.</figcaption>
+        <figcaption>Peralatan utama untuk latihan lari pagi di stadion.</figcaption>
       </figure>
     </section>
 
@@ -71,27 +84,32 @@
     <section id="catat-latihan">
       <h2>Catat Latihan Baru</h2>
 
+      <!-- TODO E.1: Form dengan label eksplisit, input type spesifik, dan validasi -->
       <form action="/simpan" method="post">
         <p>
           <label for="jenis-olahraga">Jenis Olahraga:</label>
           <input type="text" id="jenis-olahraga" name="jenis-olahraga" required placeholder="Contoh: Lari Pagi">
         </p>
+
         <p>
           <label for="tanggal-latihan">Tanggal Latihan:</label>
           <input type="date" id="tanggal-latihan" name="tanggal-latihan" required>
         </p>
+
         <p>
           <label for="durasi-latihan">Durasi (Menit):</label>
-          <input type="number" id="durasi-latihan" name="durasi-latihan" min="1" max="300" required>
+          <input type="number" id="durasi-latihan" name="durasi-latihan" min="1" max="300" required placeholder="30">
         </p>
+
         <button type="submit">Simpan Latihan</button>
       </form>
     </section>
+
   </main>
 
-  <!-- Footer -->
-  <footer id="kontak">
-    <p>Nama Lengkap Anda · NIM Anda · 2026</p>
+  <!-- TODO C.3: Footer Informasi Pembuat -->
+  <footer id="tentang-saya">
+    <p>NAMA ANDA · NIM ANDA · KELAS ANDA · 2026</p>
   </footer>
 
 </body>
