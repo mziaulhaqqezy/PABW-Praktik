@@ -1,0 +1,15 @@
+.tema-gelap {
+  --warna-latar: #101827;
+  --warna-permukaan: #182235;
+  --warna-teks: #edf3ff;
+  --warna-redup: #b3c0d7;
+  --warna-utama: #77a7ff;
+  --warna-utama-gelap: #9bbcff;
+  --warna-border: #33425d;
+  --bayangan: 0 12px 30px rgb(0 0 0 / 0.25);
+}
+
+.tema-gelap input {
+  background: #101827;
+  color: var(--warna-teks);
+}

@@ -215,3 +215,40 @@ worksheet-p5/
 ├── olahraga.jpg
 └── README.md
 ```
+# Worksheet 6 — Responsif Mobile-First
+
+- Nama: Muhammad Ziaul Haq
+- NIM: 25523065
+- Kelas: B
+
+## Struktur
+
+Folder ini salinan mandiri dari Worksheet 5. File asli di proyek PABW-Praktik tidak diubah.
+
+- `profil.html`
+- `tokens.css`
+- `base.css`
+- `layout.css`
+- `komponen.css`
+- `tema.css`
+- `responsif.css`
+- `olahraga.jpg`
+
+## Implementasi
+
+- Meta viewport sudah ada di `profil.html`.
+- Gaya dasar mobile-first ada di `responsif.css`.
+- Breakpoint tablet: `48rem`; galeri menjadi dua kolom.
+- Breakpoint desktop: `60rem`; sidebar bersanding dengan konten dan galeri menjadi tiga kolom.
+- Gambar memakai `max-width: 100%`.
+- Tabel memakai `.tabel-wrap { overflow-x: auto; }`.
+- Konten panjang memakai `min-width: 0` dan `overflow-wrap: anywhere`.
+- Tidak memakai lebar tetap piksel untuk kolom layout.
+
+## Hasil uji rancangan
+
+| Lebar | Susunan |
+|---|---|
+| 360 px | Satu kolom, sidebar di bawah konten |
+| 768 px | Galeri dua kolom |
+| 1.280 px | Sidebar bersanding, galeri tiga kolom |
