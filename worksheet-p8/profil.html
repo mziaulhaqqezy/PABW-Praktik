@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jadwal dan Target Olahraga Saya</title>
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="layout.css">
+  <link rel="stylesheet" href="komponen.css">
+  <link rel="stylesheet" href="tema.css">
+  <link rel="stylesheet" href="responsif.css">
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <a class="logo" href="#jadwal">FitPlan</a>
+      <nav class="navbar" aria-label="Navigasi utama">
+        <a href="#jadwal">Jadwal Olahraga</a>
+        <a href="#target">Target Olahraga</a>
+        <a href="#catat">Catat Latihan</a>
+      </nav>
+    </header>
+
+    <div class="isi">
+      <aside class="sisi" aria-label="Ringkasan halaman">
+        <h2>Menu latihan</h2>
+        <ul class="menu-samping">
+          <li><a href="#jadwal">Jadwal mingguan</a></li>
+          <li><a href="#target">Target kebugaran</a></li>
+          <li><a href="#catat">Catat latihan</a></li>
+        </ul>
+        <p class="sisi__catatan">Susun latihan secara rutin untuk menjaga konsistensi dan kebugaran.</p>
+      </aside>
+
+      <main class="utama">
+        <section id="jadwal" class="kartu sorotan">
+          <div class="kartu__isi">
+            <p class="eyebrow">Rencana mingguan</p>
+            <h1 class="kartu__judul">Jadwal dan Target Olahraga Saya</h1>
+            <p>Halaman ini berisi jadwal latihan dan target olahraga saya dalam satu minggu.</p>
+          </div>
+          <div class="kartu__kaki">
+            <span>4 sesi latihan</span>
+            <a class="tombol tombol--sekunder" href="#catat">Catat sesi</a>
+          </div>
+        </section>
+
+        <div class="galeri">
+          <section class="kartu papan" aria-labelledby="jadwal-title">
+            <div class="kartu__isi">
+              <h2 id="jadwal-title" class="kartu__judul">Jadwal Olahraga</h2>
+              <div class="tabel-wrap">
+                <table>
+                  <caption>Jadwal Olahraga Mingguan</caption>
+                  <thead>
+                    <tr>
+                      <th scope="col">Hari</th>
+                      <th scope="col">Jenis Olahraga</th>
+                      <th scope="col">Durasi</th>
+                      <th scope="col">Target Kalori</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><th scope="row">Senin</th><td>Upper Body</td><td>60 menit</td><td>400 kkal</td></tr>
+                    <tr><th scope="row">Rabu</th><td>Pull Day</td><td>60 menit</td><td>400 kkal</td></tr>
+                    <tr><th scope="row">Kamis</th><td>Lower Body</td><td>60 menit</td><td>450 kkal</td></tr>
+                    <tr><th scope="row">Jumat</th><td>Push Day</td><td>60 menit</td><td>400 kkal</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+
+          <section id="target" class="kartu">
+            <div class="kartu__isi">
+              <h2 class="kartu__judul">Target Olahraga</h2>
+              <figure>
+                <img src="olahraga.jpg" alt="Seseorang sedang melakukan latihan olahraga di gym" width="640" height="360" loading="lazy">
+                <figcaption>Latihan olahraga untuk mencapai target kebugaran.</figcaption>
+              </figure>
+              <p>Target saya adalah melakukan latihan secara rutin, menjaga konsistensi latihan, dan meningkatkan kebugaran.</p>
+            </div>
+          </section>
+
+          <section id="catat" class="kartu">
+            <div class="kartu__isi">
+              <h2 class="kartu__judul">Catat Latihan</h2>
+              <form action="/simpan" method="post">
+                <div class="field">
+                  <label for="jenis-olahraga">Jenis Olahraga</label>
+                  <input type="text" id="jenis-olahraga" name="jenis-olahraga" required>
+                </div>
+                <div class="field">
+                  <label for="tanggal">Tanggal Latihan</label>
+                  <input type="date" id="tanggal" name="tanggal" required>
+                </div>
+                <div class="field">
+                  <label for="durasi">Durasi Latihan (menit)</label>
+                  <input type="number" id="durasi" name="durasi" min="1" max="300" required>
+                </div>
+                <button class="tombol" type="submit">Simpan Latihan</button>
+              </form>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <footer class="footer">
+      <p>&copy; 2026 Jadwal dan Target Olahraga Saya</p>
+      <button class="pengalih-tema" type="button" aria-pressed="false">Ubah tema</button>
+    </footer>
+  </div>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

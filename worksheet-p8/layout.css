@@ -1,0 +1,82 @@
+.page {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100dvh;
+}
+
+.header,
+.footer {
+  padding: var(--space-4) clamp(var(--space-4), 5vw, var(--space-8));
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  background: var(--warna-permukaan);
+  border-bottom: 1px solid var(--warna-border);
+}
+
+.logo {
+  color: var(--warna-teks);
+  font-size: 1.25rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.navbar a {
+  color: var(--warna-redup);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.navbar a:hover,
+.navbar a:focus-visible {
+  color: var(--warna-utama);
+}
+
+.isi {
+  display: grid;
+  grid-template-columns: minmax(0, 16rem) minmax(0, 1fr);
+  grid-template-areas: "sisi utama";
+  align-items: start;
+  gap: var(--space-6);
+  width: min(100% - 2rem, 80rem);
+  margin-inline: auto;
+  padding-block: var(--space-6);
+}
+
+.sisi {
+  grid-area: sisi;
+}
+
+.utama {
+  grid-area: utama;
+  min-width: 0;
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  color: var(--warna-redup);
+  border-top: 1px solid var(--warna-border);
+}
+
+@media (max-width: 42rem) {
+  .isi {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "utama" "sisi";
+  }
+}

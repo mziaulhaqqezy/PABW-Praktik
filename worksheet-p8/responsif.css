@@ -1,0 +1,83 @@
+/* Mobile-first: dasar berlaku pada semua lebar. */
+html {
+  overflow-x: hidden;
+}
+
+body {
+  min-width: 0;
+}
+
+.page {
+  min-height: 100dvh;
+}
+
+.header,
+.footer {
+  padding-inline: 1rem;
+}
+
+.isi {
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas: "utama" "sisi";
+  width: min(100% - 1rem, 80rem);
+  gap: 1rem;
+  padding-block: 1rem;
+}
+
+.utama,
+.sisi,
+.kartu,
+.kartu__isi,
+.galeri {
+  min-width: 0;
+}
+
+.galeri {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.sorotan {
+  grid-column: auto;
+}
+
+.papan {
+  grid-row: auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.tabel-wrap {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+p,
+li,
+td,
+th {
+  font-size: 1rem;
+  overflow-wrap: anywhere;
+}
+
+/* Tablet: galeri dua kolom. */
+@media (min-width: 48rem) {
+  .galeri {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Desktop: sidebar bersanding dengan konten, galeri tiga kolom. */
+@media (min-width: 60rem) {
+  .isi {
+    grid-template-columns: minmax(0, 16rem) minmax(0, 1fr);
+    grid-template-areas: "sisi utama";
+    gap: 2rem;
+  }
+
+  .galeri {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

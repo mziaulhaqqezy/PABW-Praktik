@@ -1,0 +1,18 @@
+:root {
+  --warna-latar: #f5f7fb;
+  --warna-permukaan: #ffffff;
+  --warna-teks: #172033;
+  --warna-redup: #536078;
+  --warna-utama: #2563eb;
+  --warna-utama-gelap: #1d4ed8;
+  --warna-border: #dbe3f0;
+  --bayangan: 0 12px 30px rgb(23 32 51 / 0.08);
+  --radius: 1rem;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-8: 3rem;
+}
